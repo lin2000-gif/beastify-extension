@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "Beastify",
+    "description": "Adds a radom beast",
+    "version": "1.0",
+    "permissions": ["activeTab"],
+    "action": {
+        "default_icon": "images/hello_extensions.png",
+        "default_title": "Beastify",
+        "default_popup": "popup/choose_beast.html"
+    },
+    "content_scripts": [
+        {
+            "js": ["content_scripts/beastify.js"],
+            "matches": ["https://*/*", "http://*/*"]
+        }
+    ],
+    "web_accessible_resources": [{
+        "resources": [
+            "beasts/*"
+        ],
+        "matches": ["https://*/*", "http://*/*"]
+    }]
+  }
+  
